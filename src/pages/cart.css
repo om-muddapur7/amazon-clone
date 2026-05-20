@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.cart{
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.items{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cnt{
+    display: flex;
+    align-items: center;
+}
+
+.summary{
+    border: 1px solid gray;
+}
