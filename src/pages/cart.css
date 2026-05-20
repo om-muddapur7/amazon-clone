@@ -1,5 +1,3 @@
-
-
 .container{
     display: flex;
     justify-content: space-between;
@@ -7,7 +5,7 @@
     padding: 20px;
     background-color:antiquewhite;
 }
-
+ 
 .cart{
     display: flex;
     flex-direction: column;
@@ -17,7 +15,7 @@
     box-shadow: 0 0 0 0.5;
 }
 
-.items{
+.items1{
     display: flex;
     padding: 10px;
     justify-content: flex-start;

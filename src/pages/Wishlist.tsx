@@ -1,73 +1,93 @@
-import Navbar from "../components/Navbar"
-import "./wishlist.css"
+import { useState } from "react";
+import Navbar from "../components/Navbar";
+import "./wishlist.css";
+import { useNavigate } from "react-router-dom";
 
 export const Wishlist = () => {
-  return (
-    <div>
-        <Navbar />
+	const navigate = useNavigate();
 
-        <div className="container">
-            <div className="left">
-                <h2 id="l1">Your Wish List</h2>
-                <p id="l2">Default list</p>
-            </div>
+    const [btnTxt, setBtnTxt] = useState("Add to Cart");
 
-            <div className="right">
-                <div className="head-sec">
-                    <div className="hds1">
-                        <h2 id="r1">Your Wish List</h2>
-                        <p>Public</p>
-                    </div>
+    const product = {
+        image: "src\assets\hero.png",
+        name: "Keyboard",
+        price: "$2290.00"
+    }
 
-                    <div className="hds2">
-                        <a href="#">Send list to others </a>
+    const handleSubmit = () => {
+        setBtnTxt("Proceed to checkout");
 
-                        <input type="text" placeholder="Search..." />
+        navigate("/cart", {
+            state: {...product},
+        })
+    }
 
-                        <button>Filter & Sort</button>
-                    </div>
-                    
-                </div>
+    
+    return (
+		<div>
+			<Navbar />
 
-                <div className="rgt-body">
-                    <div className="item">
-                        <img src="src\assets\hero.png" alt="" />
+			<div className="container1">
+				<div className="left">
+					<h2 id="l1">Your Wish List</h2>
+					<p id="l2">Default list</p>
+				</div>
 
-                        <h2>Keyboard</h2>
-                        <h2>$2290.00</h2>
+				<div className="right">
+					<div className="head-sec">
+						<div className="hds1">
+							<h2 id="r1">Your Wish List</h2>
+							<p>Public</p>
+						</div>
 
-                        <button className="btn2">Add to Cart</button>
-                    </div>
+						<div className="hds2">
+							<a href="#">Send list to others </a>
 
-                    <div className="item">
-                        <img src="src\assets\hero.png" alt="" />
+							<input type="text" placeholder="Search..." />
 
-                        <h2>USB-C Adapter</h2>
-                        <h2>$289.00</h2>
+							<button>Filter & Sort</button>
+						</div>
+					</div>
 
-                        <button className="btn2">Add to Cart</button>
-                    </div>
+					<div className="rgt-body">
+						<div className="item">
+							<img src="src\assets\hero.png" alt="" />
 
-                    <div className="item">
-                        <img src="src\assets\hero.png" alt="" />
+							<h2>Keyboard</h2>
+							<h2>$2290.00</h2>
 
-                        <h2>Computer Monitor</h2>
-                        <h2>$999.00</h2>
+							<button className="btn2" onClick={handleSubmit}>{btnTxt}</button>
+						</div>
 
-                        <button className="btn2">Add to Cart</button>
-                    </div>
+						<div className="item">
+							<img src="src\assets\hero.png" alt="" />
 
-                    <div className="item">
-                        <img src="src\assets\hero.png" alt="" />
+							<h2>USB-C Adapter</h2>
+							<h2>$289.00</h2>
 
-                        <h2>Mouse</h2>
-                        <h2>$90.00</h2>
+							<button className="btn2">Add to Cart</button>
+						</div>
 
-                        <button className="btn2">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
-}
+						<div className="item">
+							<img src="src\assets\hero.png" alt="" />
+
+							<h2>Computer Monitor</h2>
+							<h2>$999.00</h2>
+
+							<button className="btn2">Add to Cart</button>
+						</div>
+
+						<div className="item">
+							<img src="src\assets\hero.png" alt="" />
+
+							<h2>Mouse</h2>
+							<h2>$90.00</h2>
+
+							<button className="btn2">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
