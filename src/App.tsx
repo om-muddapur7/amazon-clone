@@ -1,10 +1,10 @@
-import Navbar from "./components/Navbar"
+import { Wishlist } from "./pages/Wishlist"
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      <Wishlist />
     </>
   )
 }
