@@ -1,28 +1,89 @@
+
+
 .container{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
+    background-color:antiquewhite;
 }
 
 .cart{
-    border: 1px solid gray;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0.5;
 }
 
 .items{
     display: flex;
     padding: 10px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    width: 900px;
 }
 
 .cnt{
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    gap: 5px;
 }
 
 .summary{
+    width: 450px;
+    background-color: white;
+    padding: 20px;
+}
+
+.itms{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+.buy{
+    margin-top: 30px;
+    background-color: orange;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 450px;
+}
+
+h1,h2 {
+    margin: 0%;
+}
+
+img{
+    height: 50px;
+    width: 50px;
     border: 1px solid gray;
+}
+
+.details{
+    padding: 10px;
+}
+
+h3{
+    margin: 0%;
+    margin-bottom: 5px;
+}
+
+.stock{
+    margin: 0%;
+    margin-bottom: 10px;
+    color: green;
+}
+
+.price{
+    margin-left: 500px;
 }

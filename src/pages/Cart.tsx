@@ -15,7 +15,7 @@ const Cart = () => {
 
 						<div className="details">
 							<h3>Computer keyboard</h3>
-							<p>In Stock</p>
+							<p className="stock">In Stock</p>
 
 							<div className="cnt">
 								<button>-</button>
@@ -25,7 +25,7 @@ const Cart = () => {
 							</div>
 						</div>
 
-						<h2>$369.00</h2>
+						<h2 className="price">$369.00</h2>
 					</div>
 
                     <div className="items">
@@ -33,7 +33,7 @@ const Cart = () => {
 
 						<div className="details">
 							<h3>Computer keyboard</h3>
-							<p>In Stock</p>
+							<p className="stock">In Stock</p>
 
 							<div className="cnt">
 								<button>-</button>
@@ -43,7 +43,7 @@ const Cart = () => {
 							</div>
 						</div>
 
-						<h2>$369.00</h2>
+						<h2 className="price">$369.00</h2>
 					</div>
 				</div>
 
@@ -55,12 +55,14 @@ const Cart = () => {
 						<p>$279.00</p>
 					</div>
 
+                    <hr />
+
 					<div className="total">
 						<h2>Order Total: </h2>
 						<h2>$279.00</h2>
 					</div>
 
-					<button>Proceed to Buy</button>
+					<button className="buy">Proceed to Buy</button>
 				</div>
 			</div>
 		</div>
